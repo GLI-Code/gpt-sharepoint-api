@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  api:
+    build: .
+    container_name: sharepoint-api
+    env_file:
+      - .env
+    ports:
+      - "9080:9080"
+    restart: unless-stopped
+# Opcionalmente, especifica un nombre de host fijo para facilitar la comunicación
+# entre servicios dentro del mismo proyecto de Docker Compose.
+# No es obligatorio, a menos que otros contenedores necesiten referenciar
+# este servicio por su nombre.
+# hostname: sharepoint-api

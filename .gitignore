@@ -1,0 +1,8 @@
+# Ignorar archivos sensibles
+.env
+*.key
+*.pem
+
+# Ignorar carpetas
+secrets/
+config/private/
